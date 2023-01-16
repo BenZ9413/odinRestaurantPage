@@ -1,16 +1,18 @@
+import backgroundImageSource from "./imgLandingPage.jpg";
+
 const contentNode = document.querySelector("#content");
 
 const constructLandingpage = function () {
-  constructHeader();
+  constructBackground();
   constructMain();
   constructFooter();
 };
 
-const constructHeader = function () {
-  console.log("Successfully created the header!");
-  const headerContainer = document.createElement("div");
-  headerContainer.id = "headerContainer";
-  contentNode.appendChild(headerContainer);
+const constructBackground = function () {
+  const html = document.querySelector("html");
+  html.style.backgroundImage = `url(${backgroundImageSource})`;
+  contentNode.setAttribute("class", "overlay");
+  console.log("Successfully created the background!");
 };
 
 const constructMain = function () {
