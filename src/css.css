@@ -24,6 +24,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+#content.header {
+  align-items: flex-start;
+}
+
 #textContainer {
   color: white;
   font-size: 4rem;
