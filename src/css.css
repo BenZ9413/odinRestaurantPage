@@ -35,7 +35,7 @@ body {
 
 #navigationContainer {
   display: grid;
-  grid-column: 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 #btnLocation,
@@ -45,6 +45,13 @@ body {
   border: none;
   color: white;
   font-size: 2rem;
+}
+
+#btnLocation:hover,
+#btnMenu:hover,
+#btnContact:hover {
+  color: rgb(196, 179, 179);
+  font-size: 1.9rem;
 }
 
 #btnLocation {
