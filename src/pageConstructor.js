@@ -13,10 +13,13 @@ const constructLandingpage = function () {
 const constructBackground = function () {
   const html = document.querySelector("html");
   html.style.backgroundImage = `url(${backgroundImageSource})`;
-  contentNode.setAttribute("class", "overlay");
+  const overlay = document.createElement("div");
+  overlay.setAttribute("id", "overlay");
+  contentNode.appendChild(overlay);
 };
 
 const constructContent = function () {
+  contentNode.setAttribute("class", "landingPage");
   const textContainer = document.createElement("div");
   textContainer.id = "textContainer";
   const restaurantName = document.createElement("div");

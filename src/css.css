@@ -6,15 +6,24 @@ html {
 
 body {
   margin: 0px;
+  height: 100%;
 }
 
 #content {
   display: flex;
   justify-content: center;
+  height: 100%;
+}
+
+#content.landingPage {
   align-items: center;
 }
 
-#content.overlay {
+#content.tabPage {
+  align-items: flex-start;
+}
+
+#overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -24,13 +33,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#content.header {
-  align-items: flex-start;
-}
-
 #textContainer {
   color: white;
   font-size: 4rem;
+  z-index: 10;
 }
 
 #restaurantName {

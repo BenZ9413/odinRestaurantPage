@@ -3,7 +3,7 @@ import clearPage from "./clearPage";
 const testNode = document.querySelector("#content");
 
 const createContactTab = function () {
-  testNode.classList.add("header");
+  testNode.setAttribute("class", "tabPage");
   alert("Loading Contact Tab...");
 };
 
