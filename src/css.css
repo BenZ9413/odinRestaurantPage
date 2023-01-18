@@ -11,19 +11,21 @@ body {
 
 #content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
 }
 
 #content.landingPage {
-  align-items: center;
+  justify-content: center;
 }
 
 #content.tabPage {
-  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 #overlay {
+  z-index: -1;
   position: fixed;
   top: 0;
   right: 0;
@@ -36,7 +38,9 @@ body {
 #textContainer {
   color: white;
   font-size: 4rem;
-  z-index: 10;
+  width: 650px;
+  margin: 20px;
+  margin-bottom: 10px;
 }
 
 #restaurantName {
@@ -74,4 +78,28 @@ body {
 
 #btnContact {
   grid-area: 1 / 3 / 2 / 4;
+}
+
+/* ------------ Contact Tab ----------------- */
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  max-width: 650px;
+  min-width: 425px;
+  color: white;
+  margin: 20px;
+  margin-top: 10px;
+}
+
+#contactGreeting {
+  font-size: 1.2rem;
+  margin: 0px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
