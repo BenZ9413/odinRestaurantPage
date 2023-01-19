@@ -1,4 +1,5 @@
-import clearPage from "./clearPage";
+import { clearPage } from "./supportFunctions";
+import { setupTheHeader } from "./supportFunctions";
 
 const contentNode = document.querySelector("#content");
 
@@ -12,10 +13,9 @@ const inputTypes = ["text", "email", "textarea"];
 const attributes = ["name", "type", "placeholder", "required"];
 const nameAttributes = ["contactName", "contactMail", "contactText", "true"];
 
-const createContactTab = function () {
-  const btnContact = document.querySelector("#btnContact");
-  btnContact.setAttribute("class", "active");
-  contentNode.setAttribute("class", "tabPage");
+const createContactTab = function (clickedTab) {
+  clearPage();
+  setupTheHeader(contentNode, clickedTab);
   const contactForm = document.createElement("form");
   contactForm.setAttribute("id", "contactForm");
 

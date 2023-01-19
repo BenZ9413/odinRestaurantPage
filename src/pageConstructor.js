@@ -30,15 +30,21 @@ const constructContent = function () {
   const btnLocation = document.createElement("button");
   btnLocation.id = "btnLocation";
   btnLocation.textContent = "Location";
-  btnLocation.onclick = createLocationTab;
+  btnLocation.addEventListener("click", function (e) {
+    createLocationTab(e);
+  });
   const btnMenu = document.createElement("button");
   btnMenu.id = "btnMenu";
   btnMenu.textContent = "Menu";
-  btnMenu.onclick = createMenuTab;
+  btnMenu.addEventListener("click", function (e) {
+    createMenuTab(e);
+  });
   const btnContact = document.createElement("button");
   btnContact.id = "btnContact";
   btnContact.textContent = "Contact";
-  btnContact.onclick = createContactTab;
+  btnContact.addEventListener("click", function (e) {
+    createContactTab(e);
+  });
 
   navigationContainer.appendChild(btnLocation);
   navigationContainer.appendChild(btnMenu);
