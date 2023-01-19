@@ -38,7 +38,7 @@ body {
 #textContainer {
   color: white;
   font-size: 4rem;
-  width: 650px;
+  max-width: 650px;
   margin: 20px;
   margin-bottom: 10px;
 }
@@ -68,6 +68,14 @@ body {
   font-size: 1.9rem;
 }
 
+#btnLocation.active,
+#btnMenu.active,
+#btnContact.active {
+  color: rgb(196, 179, 179);
+  font-size: 1.9rem;
+  pointer-events: none;
+}
+
 #btnLocation {
   grid-area: 1 / 1 / 2 / 2;
 }
@@ -87,11 +95,11 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  max-width: 650px;
-  min-width: 425px;
+  max-width: 500px;
   color: white;
   margin: 20px;
   margin-top: 10px;
+  font-size: 1rem;
 }
 
 #contactGreeting {
@@ -102,4 +110,13 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+}
+
+#btnSubmitContactForm {
+  border: none;
+  background: rgb(196, 179, 179);
+}
+
+#btnSubmitContactForm:hover {
+  background: rgb(173, 163, 163);
 }

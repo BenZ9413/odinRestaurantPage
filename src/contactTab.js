@@ -1,6 +1,7 @@
 import clearPage from "./clearPage";
 
 const contentNode = document.querySelector("#content");
+
 const labelNames = ["Name", "Mail", "Your Message"];
 const placeholderTexts = [
   "Enter your Name",
@@ -8,10 +9,12 @@ const placeholderTexts = [
   "Write your Message",
 ];
 const inputTypes = ["text", "email", "textarea"];
-const attributes = ["name", "type", "placeholder"];
-const nameAttributes = ["contactName", "contactMail", "contactText"];
+const attributes = ["name", "type", "placeholder", "required"];
+const nameAttributes = ["contactName", "contactMail", "contactText", "true"];
 
 const createContactTab = function () {
+  const btnContact = document.querySelector("#btnContact");
+  btnContact.setAttribute("class", "active");
   contentNode.setAttribute("class", "tabPage");
   const contactForm = document.createElement("form");
   contactForm.setAttribute("id", "contactForm");
@@ -32,6 +35,7 @@ const createContactTab = function () {
     input.setAttribute(attributes[0], nameAttributes[i]);
     input.setAttribute(attributes[1], inputTypes[i]);
     input.setAttribute(attributes[2], placeholderTexts[i]);
+    input.setAttribute("required", "");
 
     wrapper.appendChild(label);
     wrapper.appendChild(input);
@@ -42,13 +46,16 @@ const createContactTab = function () {
   const btnSubmitContactForm = document.createElement("button");
   btnSubmitContactForm.setAttribute("id", "btnSubmitContactForm");
   btnSubmitContactForm.textContent = "Submit";
-  btnSubmitContactForm.onclick = submitContactForm;
+  btnSubmitContactForm.addEventListener("click", function (e) {
+    submitContactForm(e);
+  });
   contactForm.appendChild(btnSubmitContactForm);
 
   contentNode.appendChild(contactForm);
 };
 
-const submitContactForm = function () {
+const submitContactForm = function (e) {
+  e.preventDefault();
   alert(
     "Thanks for reaching out to us. We'll get back to you as soon as possible!"
   );
