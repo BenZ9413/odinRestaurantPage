@@ -25,7 +25,7 @@ const createLocationTab = function (clickedTab) {
 
   const locSignature = document.createElement("p");
   locSignature.setAttribute("id", "locSignature");
-  locSignature.textContent = "~~ La Familia ~~";
+  locSignature.textContent = "~~ La Família ~~";
 
   imgAndTextContainer.appendChild(locImage);
   imgAndTextContainer.appendChild(locText);
