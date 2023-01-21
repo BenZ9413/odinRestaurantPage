@@ -2,6 +2,7 @@ html {
   height: 100%;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 body {
@@ -132,6 +133,7 @@ body {
 #menuContentContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   row-gap: 20px;
   height: 100%;
   max-width: 500px;
