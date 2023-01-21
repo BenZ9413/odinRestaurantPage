@@ -24,7 +24,7 @@ const createMenuTab = function (clickedTab) {
     let header = document.createElement("div");
     header.setAttribute("id", `${menu.toLowerCase()}Header`);
     header.setAttribute("class", "menuHeader");
-    header.textContent = menu;
+    header.textContent = `~ ${menu} ~`;
 
     separateMenu.appendChild(header);
 
