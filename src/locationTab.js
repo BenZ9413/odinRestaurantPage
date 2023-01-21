@@ -1,13 +1,8 @@
-import { clearPage } from "./supportFunctions";
-import { setupTheHeader } from "./supportFunctions";
 import locImageSource from "./location.jpg";
 
 const contentNode = document.querySelector("#content");
 
-const createLocationTab = function (clickedTab) {
-  clearPage();
-  setupTheHeader(contentNode, clickedTab);
-
+const createLocationTab = function () {
   const locContentContainer = document.createElement("div");
   locContentContainer.setAttribute("id", "locContentContainer");
 

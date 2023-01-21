@@ -1,6 +1,3 @@
-import { clearPage } from "./supportFunctions";
-import { setupTheHeader } from "./supportFunctions";
-
 const contentNode = document.querySelector("#content");
 
 const labelNames = ["Name", "Mail", "Your Message"];
@@ -13,9 +10,7 @@ const inputTypes = ["text", "email", "textarea"];
 const attributes = ["name", "type", "placeholder", "required"];
 const nameAttributes = ["contactName", "contactMail", "contactText", "true"];
 
-const createContactTab = function (clickedTab) {
-  clearPage();
-  setupTheHeader(contentNode, clickedTab);
+const createContactTab = function () {
   const contactForm = document.createElement("form");
   contactForm.setAttribute("id", "contactForm");
 

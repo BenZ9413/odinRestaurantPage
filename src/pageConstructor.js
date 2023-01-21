@@ -2,6 +2,8 @@ import backgroundImageSource from "./imgLandingPage.jpg";
 import createLocationTab from "./locationTab";
 import createMenuTab from "./menuTab";
 import createContactTab from "./contactTab";
+import { clearPage } from "./supportFunctions";
+import { setupTheHeader } from "./supportFunctions";
 
 const contentNode = document.querySelector("#content");
 
@@ -31,19 +33,25 @@ const constructContent = function () {
   btnLocation.id = "btnLocation";
   btnLocation.textContent = "Location";
   btnLocation.addEventListener("click", function (e) {
-    createLocationTab(e);
+    clearPage();
+    setupTheHeader(contentNode, e);
+    createLocationTab();
   });
   const btnMenu = document.createElement("button");
   btnMenu.id = "btnMenu";
   btnMenu.textContent = "Menu";
   btnMenu.addEventListener("click", function (e) {
-    createMenuTab(e);
+    clearPage();
+    setupTheHeader(contentNode, e);
+    createMenuTab();
   });
   const btnContact = document.createElement("button");
   btnContact.id = "btnContact";
   btnContact.textContent = "Contact";
   btnContact.addEventListener("click", function (e) {
-    createContactTab(e);
+    clearPage();
+    setupTheHeader(contentNode, e);
+    createContactTab();
   });
 
   navigationContainer.appendChild(btnLocation);

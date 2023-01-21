@@ -1,6 +1,3 @@
-import { clearPage } from "./supportFunctions";
-import { setupTheHeader } from "./supportFunctions";
-
 const contentNode = document.querySelector("#content");
 
 const menuData = {
@@ -10,10 +7,7 @@ const menuData = {
   Drinks: ["Water", "Wine", "Softdrinks"],
 };
 
-const createMenuTab = function (clickedTab) {
-  clearPage();
-  setupTheHeader(contentNode, clickedTab);
-
+const createMenuTab = function () {
   const menuContentContainer = document.createElement("div");
   menuContentContainer.setAttribute("id", "menuContentContainer");
 
